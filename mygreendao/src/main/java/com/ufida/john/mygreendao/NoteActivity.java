@@ -10,10 +10,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.SimpleAdapter;
 import android.widget.SimpleCursorAdapter;
 
 import java.text.DateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 import de.greenrobot.dao.query.Query;
@@ -88,8 +91,32 @@ public class NoteActivity extends ListActivity {
                 .orderAsc(NoteDao.Properties.Date)
                 .build();
 
-        //List notes = query.list();
-        //cursor.requery();
+       // SimpleCursorAdapter adapter = new SimpleCursorAdapter(this,android.R.layout.simple_list_item_2,cursor,from,to);
+        //setListAdapter(adapter);
+
+
+
+
+          List<Note> notes = query.list();
+//        String textColumn = NoteDao.Properties.Text.columnName;
+//        String[] from = { textColumn,NoteDao.Properties.Comment.columnName };
+//        int[] to = {android.R.id.text1,android.R.id.text2};
+//        SimpleAdapter add = new SimpleAdapter(this,notes,android.R.layout.simple_list_item_2,from,to);
+//        setListAdapter(add);
+
+        List<HashMap<String, Object>> hashMaplst=new ArrayList<HashMap<String,Object>>();
+
+        for (Note note : notes) {
+            HashMap<String, Object> item=new HashMap<String, Object>();
+            item.put("text1", note.getText());
+
+            item.put("comment", note.getComment());
+            hashMaplst.add(item);
+        }
+
+        SimpleAdapter simpleAdapter=new SimpleAdapter(this,hashMaplst,R.layout.list_item, new String[]{"text1","comment"},new int[]{R.id.text1,R.id.text2});
+        setListAdapter(simpleAdapter);
+
         QueryBuilder.LOG_SQL  = true;
         QueryBuilder.LOG_VALUES = true;
     }
