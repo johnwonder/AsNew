@@ -1,18 +1,18 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="@android:color/white">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
+    <TextView
+        android:text="@string/hello_world"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:fitsSystemWindows="true">
-        <TextView
-            android:text="TintBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </android.support.v7.widget.Toolbar>
+        android:text="asdfasf"
+        android:layout_alignParentBottom="true"/>
 
-</LinearLayout>
+
+</RelativeLayout>
