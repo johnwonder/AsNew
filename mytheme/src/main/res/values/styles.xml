@@ -6,7 +6,8 @@
     <!-- Base application theme. -->
     <style name="BaseTheme"  parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-
+        <item name="windowActionBarOverlay">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
     </style>
 
 </resources>
