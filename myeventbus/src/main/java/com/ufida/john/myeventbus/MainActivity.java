@@ -48,7 +48,23 @@ public class MainActivity extends Activity {
         String msg = "onEventMainThread收到了消息:"+event.getmMsg();
         Log.d("ufida",msg);
         tv.setText(msg);
-        Toast.makeText(this,msg,Toast.LENGTH_LONG).show();
+        Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
+    }
+
+    public void onEventMainThread(SecondEvent event) {
+        Log.d("ufida", "onEventMainThread收到了消息:" + event.getmMsg());
+    }
+
+    public void onEventBackgroundThread(SecondEvent event) {
+        Log.d("ufida", "onEventBackground收到了消息:" + event.getmMsg());
+    }
+
+    public void onEventAsync(SecondEvent event) {
+        Log.d("ufida","onEventAsync收到了消息:"+event.getmMsg());
+    }
+
+    public void onEvent(ThirdEvent event) {
+        Log.d("ufida","OnEvent收到了消息:"+event.getmMsg());
     }
 
     @Override

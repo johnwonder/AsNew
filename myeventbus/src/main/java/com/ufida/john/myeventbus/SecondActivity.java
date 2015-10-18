@@ -13,6 +13,8 @@ import de.greenrobot.event.EventBus;
 public class SecondActivity extends Activity {
 
     private Button btn_FirstEvent ;
+    private  Button btn_SecondEvent;
+    private  Button btn_ThirdEvent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,5 +28,18 @@ public class SecondActivity extends Activity {
             }
         });
 
+        btn_SecondEvent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EventBus.getDefault().post(new FirstEvent("SecondEvent btn clicked"));
+            }
+        });
+
+        btn_ThirdEvent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EventBus.getDefault().post(new FirstEvent("ThirdEvent btn clicked"));
+            }
+        });
     }
 }

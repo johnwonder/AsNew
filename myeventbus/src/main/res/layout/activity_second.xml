@@ -10,4 +10,14 @@
     android:text="First Event"
     android:layout_width="match_parent"
     android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_second_event"
+        android:text="First Event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_third_event"
+        android:text="First Event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>
