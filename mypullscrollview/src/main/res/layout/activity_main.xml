@@ -1,0 +1,18 @@
+<!--xmlns:attrstest="http://schemas.android.com/apk/res/com.ufida.john.mypullscrollview"-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:attrstest="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <com.ufida.john.mypullscrollview.MyTextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        attrstest:headerHeight="300dp"
+        attrstest:headerVisibleHeight="100dp"
+        attrstest:age="young"/>
+
+</RelativeLayout>

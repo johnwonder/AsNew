@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyTextView">
+        <attr name="header" format="reference"/>
+        <attr name="headerHeight" format="dimension"/>
+        <attr name="headerVisibleHeight" format="dimension" />
+        <attr name="age">
+            <flag name="child" value="10"/>
+            <flag name="young" value="18"/>
+            <flag name="old" value="60" />
+
+        </attr>
+    </declare-styleable>
+
+</resources>
