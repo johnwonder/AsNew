@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 /**
  * Created by jn on 2015/10/20.
+ * http://www.cnblogs.com/jerehedu/p/4885259.html
  */
 public class ClockActivity extends Activity {
 
