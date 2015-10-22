@@ -25,6 +25,7 @@ public class ClockService extends Service {
                     break;
                 case "continue":
                     controllerOpt =true;
+                    countTime();
                     break;
                 case "stop":
                     controllerOpt =false;
